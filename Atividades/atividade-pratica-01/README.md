@@ -11,7 +11,9 @@
 #### A api está estruturada em dois arquivos principais.
 ##### Api: Pasta onde contém aqruivos que consultam os bancos de dados e retornam está requisição ao cliente.
  - **Pasta database:** Possui uma constante que é usada durante as consultas do banco.
- - **Pasta service:** Contém as consultas e as rotas para requirir as mesmas. Cada tipo existente no sistema possui sua pasta neste dir. Dentro das mesmas possuimos router.ts e services.ts. Router.ts é responsável pela criação da url de requisição, ele é que dispara as funções de consulta ao banco que acontece no service.ts.   
+ - **Pasta service:** Contém as consultas e as rotas para requirir as mesmas. Cada tipo existente no sistema possui sua pasta neste dir. Dentro das mesmas possuimos router.ts e services.ts. Router.ts é responsável pela criação da url de requisição, ele é que dispara as funções de consulta ao banco que acontece no service.ts.
+
+##### Prima: Arquivo que contém mapeamento da base de dados, há um script para povoamento da base de dados.
 
 ### ROTAS:
 #### Tipo de sangue:
