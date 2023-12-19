@@ -5,7 +5,7 @@
 #### Atenção: As configurações do banco deve ser adequada, para isso vá até a pasta .env no dir /api_web e altere a url onde seu banco está rodando.
 
 ### TECNOLOGIAS:
-#### Foi utilizado express para a criação das rotas de requisições, e para acessar e criar os dados do banco de dados foi utilizado o framework prisma, que permite mapear e consultar o mesmo.
+#### Foi utilizado express para a criação das rotas de requisições, e para acessar e criar os dados do banco de dados foi utilizado o framework para ORM "Prisma", que permite mapear e consultar o mesmo.
 
 ### ARQUITETURA:
 #### A api está estruturada em dois arquivos principais.
