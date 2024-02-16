@@ -61,17 +61,15 @@ A principal dificuldade da execução da tarefa foi a modelagem do banco de dado
 
 ### 5. Instruções para instalação e execução
 
-## 5.1 No front:
+#### 5.1 No front:
 
 npm install
 
 npm run dev
 
-## 5.2 Na api:
+#### 5.2 Na api:
 
 npm install
 
 npx prisma db push
 
-1. [Proposta de trabalho](./01-proposal.md)
-1. [Andamento/resultados](./02-final-version.md)
