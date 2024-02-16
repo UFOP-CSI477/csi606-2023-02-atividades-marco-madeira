@@ -20,8 +20,8 @@ RoomRouter.post("/createRoom", async (req: Request, res: Response) => {
   const new_room: Room = req.body;
 
   try {
-    await RoomService.createRoom(new_room);
-    return res.status(200).json("Quarto criado com sucesso!");
+    const result = await RoomService.createRoom(new_room);
+    return res.status(200).json(result);
   } catch {
     return res.status(500).json("Não foi possível criar o quarto!");
   }

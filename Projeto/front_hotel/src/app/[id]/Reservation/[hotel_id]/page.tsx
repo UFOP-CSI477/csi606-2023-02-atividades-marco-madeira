@@ -3,12 +3,16 @@
 import { useGetHotelById } from "@/services/Hotel/hotel.queries";
 import { useCreateReservation } from "@/services/Reservation/reservation.mutates";
 import { CreateReservationDTO } from "@/types/Reservation/CreateReservationDTO";
-import { Reservation } from "@/types/Reservation/Reservation";
 import { dateToEpoch, daysInEpochs } from "@/utils/dateConvert";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 export default function ReservationPage() {
-  const { data: hotel } = useGetHotelById(1);
+
+  const path = usePathname();
+  const hotelId = path.split("/").pop()
+
+  const { data: hotel } = useGetHotelById(Number(hotelId));
 
   const { mutate: createReservation } = useCreateReservation();
 
@@ -52,7 +56,7 @@ export default function ReservationPage() {
         <h1 className="text-2xl">{hotel.name}</h1>
         <div className="flex flex-row gap-x-10 mt-6">
           <div className="w-1/2">
-            <img src="Italia.jpeg" />
+            <img src="Italia.jpeg" className="w-full"/>
           </div>
           <div className="border-solid border-r-2 border-white" />
           <div className=" w-1/2">
@@ -72,6 +76,11 @@ export default function ReservationPage() {
             <div>
               <p className="text-3xl">Capacidade:</p>
               <p className="text-xl">2 pessoas</p>
+            </div>
+
+            <div>
+              <p className="text-3xl">Address:</p>
+              <p className="text-xl">{hotel.address}</p>
             </div>
           </div>
           <div className="border-solid border-r-2 border-white" />

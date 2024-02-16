@@ -9,10 +9,11 @@ export async function getRoomById(room_id: number): Promise<Room|null> {
     })
 }
 
-export async function createRoom(new_room: Room): Promise<void> {
-  await db.room.create({
+export async function createRoom(new_room: Room): Promise<Room> {
+  const result = await db.room.create({
     data: new_room,
   });
+  return result;
 }
 
 export async function updateRoom(room_id: number, room: Room): Promise<void> {

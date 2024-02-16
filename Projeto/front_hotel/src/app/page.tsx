@@ -1,7 +1,10 @@
 "use client";
 
 import { useLogUser } from "@/services/User/user.queries";
+import { logUser } from "@/services/User/user.service";
+import { User } from "@/types/User/User";
 import { useRouter } from "next/navigation";
+import { userAgent } from "next/server";
 import { useState } from "react";
 
 export default function Login() {
@@ -9,9 +12,11 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const handleSubmitLogin = () => {
-    // const { data: user } = useLogUser(email, password);
-
-    router.push("/user/Home");
+    if (email === "user@user.com") {
+      router.push("/user/Home");
+    } else{
+      router.push("/admin/Home")
+    }
   };
 
   const router = useRouter();

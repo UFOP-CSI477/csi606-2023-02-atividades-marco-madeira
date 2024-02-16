@@ -10,27 +10,27 @@ export default function AllReservations() {
     reservations && (
       <div className="flex flex-col gap-y-8">
         {reservations.map((res) => (
-          <div className="flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4 border-s-white border-2 p-4">
             <div>
-              <p className="text-4xl">Id:</p>
-              <p className="text-2xl">{res.id}</p>
+              <p className="text-xl">Id:</p>
+              <p className="text-lg">{res.id}</p>
             </div>
 
             <div className="flex gap-x-8">
               <div>
-                <p className="text-2xl">Check-in:</p>
-                <p className="text-xl">{epochToDate(parseInt(res.check_in))}</p>
+                <p className="text-xl">Check-in:</p>
+                <p className="text-lg">{epochToDate(parseInt(res.check_in))}</p>
               </div>
 
               <div>
-                <p className="text-2xl">Check-out:</p>
-                <p className="text-xl">{epochToDate(parseInt(res.check_out))}</p>
+                <p className="text-xl">Check-out:</p>
+                <p className="text-lg">{epochToDate(parseInt(res.check_out))}</p>
               </div>
             </div>
             
             <div>
-              <p className="text-2xl">Value:</p>
-              <p className="text-xl">${res.value}</p>
+              <p className="text-xl">Value:</p>
+              <p className="text-lg">${res.value}</p>
             </div>
           </div>
         ))}

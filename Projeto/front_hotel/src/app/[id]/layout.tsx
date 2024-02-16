@@ -1,14 +1,15 @@
 import NavBar from "@/components/NavBar";
+import { ReactNode } from "react";
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+interface ContentLayoutProps {
+  children: ReactNode;
+}
+
+export default function ContentLayout({ children }: ContentLayoutProps) {
   return (
-    <div className="my-12 mx-16 gap-y-6">
+    <div className="my-16 mx-16 gap-y-6 w-full">
       <NavBar />
-      {children}
+      <div className="p-8">{children}</div>
     </div>
   );
 }
