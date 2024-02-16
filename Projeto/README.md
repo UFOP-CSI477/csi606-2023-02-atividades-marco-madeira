@@ -41,7 +41,7 @@
 
 ### Resumo
 
-  O trabalho se trata de uma aplicação para reserva de quartos de hóteis. A ideia era que essa empresa fosse focada em turimo natural, e oferecesse não apenas um local para dormir, mas toda uma programação de viagem. Para isso foi criado dois tipos de vizualiação básicas. A primeira foi para vizualizar, acessar e reservar um hótel, a segunda para administradores, sendo possível criar novos hóteis e quartos desses hóteis.
+  O trabalho se trata de uma aplicação para reserva de quartos de hotéis. A ideia era que essa empresa fosse focada em turismo natural, e oferecesse não apenas um local para dormir, mas toda uma programação de viagem. Para isso foi criado dois tipos de visualizações básicas. A primeira foi para visualizar, acessar e reservar um hotel, a segunda para administradores, sendo possível criar novos hotéis e quartos desses hotéis.
 
 ### 1. Funcionalidades implementadas
 
@@ -57,7 +57,7 @@ Não houve.
 
 ### 4. Principais desafios e dificuldades
 
-A principal dificuldade da execução da tarefa foi a modelagem do banco de dados, pois ele define todo o fluxo que a aplicação. Esta dificuldade permite uma futura melhora no fluxo da aplicação, que apesar de estar ok, não é o melhor possível, principalmente na parte de como a reserva ocorre no banco. 
+A principal dificuldade da execução da tarefa foi a modelagem do banco de dados, pois ele define todo o fluxo que a aplicação. Esta dificuldade permite uma futura melhora no fluxo da aplicação, que apesar de estar Ok, não é o melhor possível, principalmente na parte de como a reserva ocorre no banco. 
 
 ### 5. Instruções para instalação e execução
 
@@ -67,7 +67,7 @@ npm install
 
 npm run dev
 
-#5.2 Na api:
+##5.2 Na api:
 
 npm install
 
