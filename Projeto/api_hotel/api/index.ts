@@ -2,9 +2,9 @@ import { HotelRouter } from "./services/hotel/hotel.router";
 import { ReservationRouter } from "./services/reservation/reservation.router";
 import { RoomRouter } from "./services/room/room.router";
 import { UserRouter } from "./services/user/user.router";
+import express from "express";
+import cors from "cors"
 
-const express = require("express");
-const cors = require('cors');
 export const api = express();
 const port = 8080;
 
