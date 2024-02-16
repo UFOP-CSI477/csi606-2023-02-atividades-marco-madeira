@@ -11,10 +11,25 @@ ReservationRouter.post(
     const new_reservation: Reservation = req.body;
 
     try {
-      await ReservationService.createReservation(new_reservation);
-      return res.status(200).json("Reserva criada com sucesso!");
-    } catch {
+      const result = await ReservationService.createReservation(new_reservation);
+      return res.status(200).json(result);
+    } catch (error){
+      console.log(error)
       return res.status(500).json("Reserva falhou ao ser criada!");
+    }
+  }
+);
+
+ReservationRouter.get(
+  "/getAllReservationByUserId/:id",
+  async (req: Request, res: Response) => {
+    const id = req.params.id;
+
+    try {
+      const result = await ReservationService.getAllReservationByUserId(id);
+      return res.status(200).json(result);
+    } catch {
+      return res.status(500).json("Não foi possível recuperar as reservas!");
     }
   }
 );

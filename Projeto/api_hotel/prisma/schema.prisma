@@ -18,11 +18,11 @@ model Hotel {
 }
 
 model User {
-  id Int @id @default(autoincrement())
-  email String
+  email String @id
   password String
   name String
   age Int 
+  isAdmin Boolean @default(false)
 
   reservation Reservation[]
 }
@@ -30,12 +30,12 @@ model User {
 model Reservation {
   id Int @id @default(autoincrement())
   value Float
-  check_in Int
-  check_out Int
-  user_id Int
+  check_in String
+  check_out String
+  user_id String
   room_id Int
 
-  user User @relation(fields: [user_id], references: [id]) 
+  user User @relation(fields: [user_id], references: [email]) 
   room Room @relation(fields: [room_id], references: [id])
 }
 
@@ -43,6 +43,8 @@ model Room {
   id Int @id @default(autoincrement())
   number Int 
   value Float
+  capacity Int
+  isAvaialable Boolean @default(true)
   hotel_id Int
   
   hotel Hotel @relation(fields: [hotel_id], references: [id], onDelete: Cascade)

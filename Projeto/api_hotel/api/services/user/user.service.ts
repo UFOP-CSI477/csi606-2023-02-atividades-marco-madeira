@@ -6,3 +6,12 @@ export async function createUser(new_user: User): Promise<void> {
         data: new_user
     })
 }
+
+export async function logUser(email: string, password: string): Promise<User|null> {
+    return await db.user.findFirst({
+        where:{
+            email: email,
+            password: password
+        }
+    })
+}
