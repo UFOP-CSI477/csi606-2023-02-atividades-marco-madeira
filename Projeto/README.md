@@ -61,13 +61,13 @@ A principal dificuldade da execução da tarefa foi a modelagem do banco de dado
 
 ### 5. Instruções para instalação e execução
 
-##5.1 No front:
+## 5.1 No front:
 
 npm install
 
 npm run dev
 
-##5.2 Na api:
+## 5.2 Na api:
 
 npm install
 
