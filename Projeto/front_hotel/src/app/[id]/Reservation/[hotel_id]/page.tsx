@@ -42,7 +42,7 @@ export default function ReservationPage() {
     } else {
       setReservation({
         ...reservation,
-        check_out: dateToEpoch(new_date),
+        check_out: new_date,
         value:
           daysInEpochs(parseInt(new_date), parseInt(reservation.check_in)) *
           300,
