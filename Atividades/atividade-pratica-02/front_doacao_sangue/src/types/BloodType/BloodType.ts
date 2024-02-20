@@ -12,6 +12,7 @@ export type CreateBloodTypeDTO = {
 };
 
 export type UpdateBloodTypeDTO = {
+  id: number;
   type: string;
   factor: string;
   updated_at: Date;

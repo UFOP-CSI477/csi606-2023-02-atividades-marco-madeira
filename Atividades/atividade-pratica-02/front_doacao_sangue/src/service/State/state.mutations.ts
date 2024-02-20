@@ -7,7 +7,7 @@ export function useCreateState() {
   });
 }
 
-export function useRemovePerson() {
+export function useRemoveState() {
   return useMutation(removeState, {
     onSuccess: () => console.log("Deu certo!"),
   });

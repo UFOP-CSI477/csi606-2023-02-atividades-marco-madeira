@@ -23,11 +23,10 @@ export async function createBloodType(
 }
 
 export async function updateBloodType(
-  updated_blood_type: UpdateBloodTypeDTO,
-  id: number
+  updated_blood_type: UpdateBloodTypeDTO
 ): Promise<void> {
   const response = await api.patch<void>(
-    base_url + `/update/${id}`,
+    base_url + `/update/${updated_blood_type.id}`,
     updated_blood_type
   );
   return response.data;

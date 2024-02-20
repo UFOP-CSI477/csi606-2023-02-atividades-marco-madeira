@@ -12,11 +12,8 @@ export function useCreateBloodType() {
   });
 }
 
-export function useUpdateBloodType(
-  updated_blood_type: UpdateBloodTypeDTO,
-  id: number
-) {
-  return useMutation(() => updateBloodType(updated_blood_type, id), {
+export function useUpdateBloodType() {
+  return useMutation(updateBloodType, {
     onSuccess: () => console.log("Deu certo!"),
   });
 }
